@@ -1,0 +1,8 @@
+ B=10, No detach, output directly new reference point, fixed reference points, matching by index -> Works
+ B=10, Detach, combine using pred = (x + ref_point).sigmoid(), fixed reference points, matching by index -> works
+
+B = 10, detach, combine using pred=(x + ref_point).sigmoid(), random ref points, matching by index -> does not work
+B = 1, detach, combine using pred=(x + ref_point).sigmoid(), random ref points, matching by index -> does not work
+B = 1, detach, output directly new reference point, random reference point, matching by index -> Works
+B = 1, no detach, output directly new reference point, random reference point, matching by index -> Works, predictions are accurate
+B = 1, no detach, combine using pred=(x + ref_point).sigmoid(), random ref points, matched by index -> Works but predictions are not very accurate 
